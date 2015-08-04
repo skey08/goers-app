@@ -3,9 +3,22 @@ class ArtistsController < ApplicationController
   def index
     @artists = Artist.all
   end
+
   #new
+  def new
+    @artist = Artist.new
+  end
+
   #create
+  def create
+    @artist = Artist.create!(artist_params)
+    redirect_to artist_path(@artist)
+  end
+
   #show
+  def show
+    @artist = Artist.find(params[:id])
+  end
   #edit
   #update
   #destroy
