@@ -1,7 +1,14 @@
 class ArtistsController < ApplicationController
+  before_action :set_artist, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
+
   #index
   def index
-    @artists = Artist.all
+    if current_user
+      @artists = current_user.artists
+    else
+      @artists = Artist.all
+    end
   end
 
   #new
@@ -11,30 +18,29 @@ class ArtistsController < ApplicationController
 
   #create
   def create
-    @artist = Artist.create!(artist_params)
+    # @artist = Artist.create!(artist_params)
+    @artist = current_user.artists.create!(artist_params)
     redirect_to artist_path(@artist)
   end
 
   #show
   def show
-    @artist = Artist.find(params[:id])
   end
+  
   #edit
   def edit
-    @artist = Artist.find(params[:id])
   end
-
 
   #update
   def update
-    @artist = Artist.find(params[:id])
+
     @artist.update(artist_params)
     redirect_to artist_path(@artist)
   end
 
   #destroy
   def destroy
-    @artist = Artist.find(params[:id])
+
     @artist.destroy
     redirect_to artists_path
   end
@@ -45,7 +51,9 @@ class ArtistsController < ApplicationController
     params.require(:artist).permit(:name, :photo_url)
   end
 
-
+  def set_artist
+    @artist = Artist.find(params[:id])
+  end
 
 
 end
