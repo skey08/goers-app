@@ -1,0 +1,7 @@
+<h2>Edit/Delete Image</h2>
+
+<%= render partial: "form" %>
+
+<%= form_for [@artist, @image], method: :delete do |f| %>
+  <%= f.submit "Delete Image", class: "delete" %>
+<% end  %>

@@ -24,8 +24,26 @@ class ImagesController < ApplicationController
   end
 
   #edit
+  def edit
+    @image = Image.find(params[:id])
+    @artist = Artist.find(params[:artist_id])
+  end
+
   #update
+  def update
+    @image = Image.find(params[:id])
+    @image.update(image_params)
+    redirect_to artist_image_path
+  end
+
   #destroy
+  def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    @artist = Artist.find(params[:artist_id])
+    redirect_to artist_path(@artist)
+  end
+
 
   private
   def image_params

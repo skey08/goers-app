@@ -13,6 +13,18 @@
  *= require_tree .
  *= require_self
  */
-img{
+ .artistPhoto {
   width: 150px;
+}
+
+.artistheader {
+  width: 200px;
+}
+
+.artistImages {
+  width: 150px;
+}
+
+.indivImages {
+  width: 75%;
 }

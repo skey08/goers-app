@@ -2,7 +2,7 @@
 
 <% @artists.each do |artist| %>
   <%= link_to artist.name, artist_path(artist) %>
-  <%= image_tag artist.photo_url, class: 'artist-photo', alt: "Photo of artist.name" %>
+  <%= image_tag artist.photo_url, class: 'artistPhoto', alt: "Photo of #{artist.name}" %>
 <% end %>
 
 <%= link_to "Add New Artist +", new_artist_path %>

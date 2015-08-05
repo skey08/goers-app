@@ -1,1 +1,7 @@
-<%= image_tag @image.photo_url %>
+<%= image_tag @image.photo_url, class: "indivImages "%>
+
+<%= @image.date %>
+<%= @image.venue %>
+<%= @image.location %>
+
+<h2><%= link_to "Edit/Delte Image", edit_artist_image_path %></h2>
