@@ -28,3 +28,10 @@
 .indivImages {
   width: 75%;
 }
+
+.devise {
+  float: right;
+  position: relative;
+  margin-top: -7%;
+  margin-left: 90%;
+}
