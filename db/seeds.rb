@@ -6,9 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Artist.destroy_all
+Image.destroy_all
+
 
 artists = Artist.create([
-  { name: 'The Arctic Monkeys', photo_url: 'http://www.arcticmonkeysnews.com/wp-content/uploads/2014/09/Arctic-Monkeys-2010-Large-Background-Wallpaper-For-Computer.jpg'},
+  { name: 'Arctic Monkeys', photo_url: 'http://www.arcticmonkeysnews.com/wp-content/uploads/2014/09/Arctic-Monkeys-2010-Large-Background-Wallpaper-For-Computer.jpg'},
   { name: 'Portugal The Man', photo_url: 'http://www.billboard.com/files/styles/promo_650/public/media/portugal-the-man-650-430-hayley-young.jpg'},
   { name: 'Dr Dog', photo_url: 'http://www.anti.com/media/press/Dr._Dog_by_Nicky_Devine_Flag_Sitting_1.jpg'}
   ])
+
+Image.create( date: '11/08/2015', venue: 'Red Hat Amphitheater', location: 'Raleigh, NC', photo_url: 'http://i.telegraph.co.uk/multimedia/archive/02719/arctic-monkeys-2_2719207b.jpg', artist_id: artists[0].id)
+Image.create( date: '11/15/2011', venue: 'PNC Arena', location: 'Raleigh, NC', photo_url: 'https://arcticmonkeysnews.files.wordpress.com/2012/01/arctic_monkeys_by_andy_willsher_lccc_july_200701_website_image_ying_standard.jpg', artist_id: artists[0].id)

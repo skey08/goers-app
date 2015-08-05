@@ -1,5 +1,12 @@
 <h2><%= @artist.name %></h2>
 
-<%= image_tag @artist.photo_url, alt: "Photo of #{@artist.name}" %>
+<%= image_tag @artist.photo_url, class: "artistheader", alt: "Photo of #{@artist.name}" %>
 
 <h3>Images</h3>
+
+<% @artist.images.each do |image| %>
+  <%= link_to image_tag(image.photo_url), artist_image_path(@artist, image) %>
+<% end %>
+
+<%= link_to "New Image +", new_artist_image_path(@artist) %>
+<h2><%= link_to "Edit/Delte Artist", edit_artist_path %></h2>
