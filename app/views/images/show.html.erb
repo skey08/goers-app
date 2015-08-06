@@ -1,7 +1,9 @@
 <%= image_tag @image.photo_url, class: "indivImages "%>
 
-<%= @image.date %>
-<%= @image.venue %>
-<%= @image.location %>
+<ul>
+<li><%= @image.date.strftime("%B %d, %Y") %></li>
+<li><%= @image.venue %></li>
+<li><%= @image.location %></li>
+</ul>
 
 <h2><%= link_to "Edit/Delte Image", edit_artist_image_path %></h2>

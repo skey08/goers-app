@@ -1,7 +1,7 @@
 <%= form_for [@artist, @image] do |f| %>
 
   <%= f.label :date %>
-  <%= f.text_field :date %>
+  <%= f.text_field :date, :placeholder => "MM/DD/YYYY"%>
 
   <%= f.label :venue %>
   <%= f.text_field :venue %>
