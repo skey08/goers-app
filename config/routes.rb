@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'artists#index'
 
+  get "myartists" => "artists#myartists"
+
   resources :artists do
     resources :images
   end

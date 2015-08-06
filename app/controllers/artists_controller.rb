@@ -4,12 +4,17 @@ class ArtistsController < ApplicationController
 
   #index
   def index
-    if current_user
-      @artists = current_user.artists
-    else
-      @artists = Artist.all
-    end
+    # if current_user
+    #   @artists = current_user.artists.order('name ASC')
+    # else
+      @artists = Artist.all.order('name ASC')
+    # end
   end
+
+  def myartists
+    @artists = current_user.artists.order('name ASC')
+  end
+
 
   #new
   def new
