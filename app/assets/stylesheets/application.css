@@ -15,6 +15,7 @@
  */
 
 h1 {
+  font-weight: bolder;
   font-size: 3em;
   color: #000000;
   background: #ffff00;
@@ -27,7 +28,6 @@ h1 {
    position: relative;
    width: 100%;
  }
-
 
 .nameDisplay {
   position: absolute;
