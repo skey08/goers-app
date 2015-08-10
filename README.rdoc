@@ -1,28 +1,23 @@
-== README
+https://goers-app.herokuapp.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To install this app locally go to https://github.com/skey08/goers-app.  Clone this
+repo by typing this command in your terminal '$ git clone git@github.com:skey08/goers-app.git'.
+Once you have it cloned cd to the goers-app directory.  Do a '$ bundle install'.  Then do
+'$ rake db:create' '$ rake db:migrate' and '$ rake db:seed'.  Then you should be able to
+type '$ rails s' and once rails is running go to 'localhost:3000' in your browser of
+choice and the app will be running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby 2.2.1p85
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This is a full stack project.  TO make it I used Ruby on Rails as well as some CSS and html.
+My idea was to have a way for users to submit pictures of artists that they had taken at
+a concert, and be able to include some information about that image.  I am happy with the outcome
+of the project.  For the most part it works as I had hoped.  If I had more time to
+work I would like to have it so the user could upload images rather than just link to them.
+Also, right now anyone who is logged in can delete or edit any image.  Those options should
+be limited to only the user that created them.  I would also like to have some
+administrator function.
+
+Overall I feel like this project helped solidify what I learned the past few weeks.
+It was a great experience doing a full stack project.
