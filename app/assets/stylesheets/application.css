@@ -92,3 +92,11 @@ a:link {
 a:visited {
   color: #ffff00;
 }
+
+input {
+  display: block;
+}
+
+form {
+  text-align: left;
+}
